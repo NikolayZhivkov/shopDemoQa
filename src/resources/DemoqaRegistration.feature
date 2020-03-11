@@ -11,4 +11,7 @@ When the user enter username "<username>" , "<emailAddress>" and "<password>"
 
   Examples:
   |username     |emailAddress        |password     |
-  |polyyss123   |polysssy123y@abv.bg |A1B2C3!ASDFER|
+  |pullwaven    |pullwavem@abv.bg    |A1B2C3!ASDFER|
+  |vassmanen    |vassmanen@bbb.bg    |!2B3C5!BSEWQQ|
+  |pullwavan    |possan@gmail.com    |123WER45TREWQ|
+  |vassmanane   |vassmanane@bbb.bg   |1234WER43YTRE|

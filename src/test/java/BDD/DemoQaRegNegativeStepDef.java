@@ -14,7 +14,8 @@ public class DemoQaRegNegativeStepDef {
     private static final By LOC_EMAIL_ADDRESS = By.id("reg_email");
     private static final By LOC_PASSWORD = By.id("reg_password");
     private static final By LOC_REGISTER_BUTTON = By.xpath("//p[@class=\"woocommerce-FormRow form-row\"]//button[@class=\"woocommerce-Button woocommerce-button button woocommerce-form-register__submit\"]");
-    private static final By LOC_ERROR_USERNAME = By.xpath("//ul[@class=\"woocommerce-error\"]//li[1]//strong");
+    private static final By LOC_ERROR_EMAIL_ADDRESS = By.xpath("//ul[@class=\"woocommerce-error\"]//li[1]//strong");
+    private static final By LOC_ERROR_USERNAME = By.xpath("//ul[@class=\"woocommerce-error\"]//li[1]");
 
     @Given("the user is on the user homepage and navigate to My Account button")
     public void the_user_is_on_the_user_homepage_and_navigate_to_My_Account_button() throws InterruptedException {
@@ -39,9 +40,14 @@ public class DemoQaRegNegativeStepDef {
 
     @Then("error message should be located with text {string}")
     public void error_message_should_be_located_with_text(String error) {
-        WebElement usernameErrorMessage = Browser.driver.findElement(LOC_ERROR_USERNAME);
-        usernameErrorMessage.getText();
-        Assert.assertTrue(usernameErrorMessage.isDisplayed());
+        WebElement emailAddressError = Browser.driver.findElement(LOC_EMAIL_ADDRESS);
+        emailAddressError.getText();
+        Assert.assertTrue(emailAddressError.isDisplayed());
+
+        WebElement usernameError = Browser.driver.findElement(LOC_USERNAME);
+
+        usernameError.getText();
+        Assert.assertTrue(usernameError.isDisplayed());
     }
 
 }

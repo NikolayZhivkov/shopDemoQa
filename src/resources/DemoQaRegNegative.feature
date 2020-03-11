@@ -8,4 +8,5 @@ Feature: User Registration Scenario - Negative
 
     Examples:
     |reason       |username|emailAddress|    password|error                                                                      |
-    |used username|ppp     |ppp@ajaj.com|ppp123ppp456|An account is already registered with that username. Please choose another.|
+    |used email   |ppp123   |ppp@ajaj.com|ppp123ppp456| An account is already registered with your email address. Please log in.	|
+    |used username|ppp12   |ppp21@ajaj.com|ppp1234ertty| An account is already registered with that username. Please choose another.	|
